@@ -14,6 +14,8 @@ namespace Baseball
 
         public List<Jugador> jugadores { get; set; }
         
+        public Estadio EstadioEquipo = new Estadio();
+
         public Equipo()
         {
             jugadores = new List<Jugador>();
@@ -25,6 +27,7 @@ namespace Baseball
         public Equipo(string nombre)
         {
             Nombre = nombre;
+            jugadores = new List<Jugador>();
         }
     }
 }

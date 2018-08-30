@@ -14,6 +14,7 @@ namespace Baseball
 
             Equipo equipo1 = new Equipo();
             equipo1.Nombre = "Field Team";
+            equipo1.EstadioEquipo.Nombre = "Yankee Stadium";
             equipo1.jugadores.Add(new Jugador("Nelson Barrera", "1"));
             equipo1.jugadores.Add(new Jugador("Vinicio Castilla", "2"));
             equipo1.jugadores.Add(new Jugador("Benjamín Gil", "3"));
@@ -41,6 +42,14 @@ namespace Baseball
             foreach (Equipo elemento in equipos)
             {
                 Console.WriteLine("Equipo: " + elemento.Nombre);
+                if (elemento.EstadioEquipo.Nombre != null)
+                {
+                    Console.WriteLine("Estadio: " + elemento.EstadioEquipo.Nombre);
+                }
+                else
+                {
+                    Console.WriteLine("El equipo no tiene estadio");
+                }
                 foreach (Jugador jugador in elemento.jugadores)
                 {
                     Console.WriteLine("Nombre del jugador: " + jugador.Nombre);
